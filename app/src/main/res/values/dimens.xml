@@ -6,5 +6,6 @@
 
 
     <dimen name="txt_size_35sp">35sp</dimen>
+    <dimen name="space_2dp">2dp</dimen>
 
 </resources>
