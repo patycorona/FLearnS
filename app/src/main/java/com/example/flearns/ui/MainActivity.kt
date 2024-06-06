@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import androidx.transition.Visibility
 import com.example.flearns.R
 import com.example.flearns.databinding.ActivityMainBinding
 import com.example.flearns.ui.component.Screen
+import com.example.flearns.ui.login.LoginFragment
+import com.example.flearns.ui.user.view.UserRegisterFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         ft.commit()
     }
 
-    private fun changeScreen(typeScreen: Screen) {
+    fun changeScreen(typeScreen: Screen) {
 
         binding.apply {
 
@@ -42,11 +43,22 @@ class MainActivity : AppCompatActivity() {
                 Screen.MainActivity -> {
                     //initListener()
                 }
+                Screen.UserRegisterFragment -> {
+                    openUserRegister()
+                }
+
+                else -> {
+                    Screen.LoginFragment
+                }
             }
         }
     }
 
     private fun openLoginFragment() {
         changeFragment(LoginFragment.newInstance())
+    }
+
+    private fun openUserRegister(){
+        changeFragment(UserRegisterFragment.newInstance())
     }
 }

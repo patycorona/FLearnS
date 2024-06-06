@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-android'
     id 'dagger.hilt.android.plugin'
     id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -12,9 +13,7 @@ android {
     compileSdk 34
 
     buildFeatures {
-        dataBinding true
         viewBinding = true
-       // compose true
     }
 
     defaultConfig {
@@ -46,15 +45,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-//    composeOptions {
-//        kotlinCompilerExtensionVersion '1.3.2'
-//    }
-//    packagingOptions {
-//        resources {
-//            excludes += '/META-INF/{AL2.0,LGPL2.1}'
-//        }
-//    }
 
     kapt {
         correctErrorTypes = true
@@ -89,6 +79,12 @@ dependencies {
     // Data Store
     implementation "androidx.datastore:datastore-preferences:$dataStore"
 
+    //Room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    //Optional kotlin extension and coroutines support for room
+    implementation "androidx.room:room-ktx:$roomVersion"
+
     //Rxjava
     implementation "io.reactivex.rxjava2:rxjava:$rxj2rxjava"
     implementation "io.reactivex.rxjava2:rxandroid:$rxj2rxandroid"
@@ -104,6 +100,12 @@ dependencies {
 
     //Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:$firebaseBom"))
+    implementation "com.google.firebase:firebase-analytics"
+    implementation "com.firebaseui:firebase-ui-auth:$firebaseAuth"
+    implementation "com.google.firebase:firebase-auth-ktx:"
 
     //airbnb
     implementation ("com.airbnb.android:lottie:$airbnbLottieVersion")

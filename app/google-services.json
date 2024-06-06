@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "169707380173",
+    "project_id": "flearns-d88be",
+    "storage_bucket": "flearns-d88be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169707380173:android:e0acc14b41771fdd263884",
+        "android_client_info": {
+          "package_name": "com.example.flearns"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEPPtD5jOZAtve6P0quzUvl6WI5y8FV98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

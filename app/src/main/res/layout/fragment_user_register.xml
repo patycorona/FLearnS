@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.user.view.UserRegisterFragment">
+
+    <View
+        android:id="@+id/v_trasparence"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/space_16dp"
+        android:background="@drawable/bg_user_reg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:alpha="0.20"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/space_4dp"
+        android:layout_marginTop="@dimen/space_100dp"
+        android:text="@string/tv_user_register"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_size_25sp"
+        android:textColorHint="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_email"
+        android:layout_width="@dimen/space_200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/space_60dp"
+        android:textColorHint="@color/blue"
+        android:hint="@string/hint_email"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_userName"
+            android:layout_width="@dimen/space_200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_18sp"
+            android:maxLines="@integer/min_lines"
+            tools:text="Admin@admin.com"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_pwd"
+        android:layout_width="@dimen/space_200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/space_25dp"
+        android:textColorHint="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/ti_email"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_password"
+            android:layout_width="@dimen/space_200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_18sp"
+            android:maxLines="@integer/min_lines"
+            tools:text="Password123"
+            android:textColorHint="@color/blue"
+            android:inputType="textPassword"
+            android:hint="@string/hint_password"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ti_email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_confirm_pwd"
+        android:layout_width="@dimen/space_200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/space_25dp"
+        android:textColorHint="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/ti_pwd"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_confirm_pwd"
+            android:layout_width="@dimen/space_200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_18sp"
+            android:maxLines="@integer/min_lines"
+            tools:text="Password123"
+            android:textColorHint="@color/blue"
+            android:inputType="textPassword"
+            android:hint="@string/hint_password"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ti_email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btn_enter"
+        android:layout_marginTop="@dimen/space_40dp"
+        android:textAlignment="center"
+        android:padding="@dimen/space_16dp"
+        android:elevation="@dimen/space_4dp"
+        android:layout_width="@dimen/space_200dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16sp"
+        android:minLines="@integer/min_lines"
+        android:background="@drawable/bg_blue"
+        android:text="@string/tv_registro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ti_confirm_pwd"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

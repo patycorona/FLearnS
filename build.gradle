@@ -4,6 +4,7 @@ plugins {
     id 'com.android.library' version '8.0.2' apply false
     id 'org.jetbrains.kotlin.android' version '1.9.0' apply false //'1.9.0' apply false
     id 'com.google.dagger.hilt.android' version "2.48.1" apply false
+    id 'com.google.gms.google-services' version "4.4.2" apply false
 }
 
 ext{
@@ -30,6 +31,9 @@ ext{
     //data store
     dataStore ='1.0.0'
 
+    //Room
+    roomVersion = "2.5.2"
+
     //Rxjava
     rxj2rxjava = '2.2.6'
     rxj2rxandroid = '2.1.1'
@@ -44,6 +48,10 @@ ext{
 
     //Glide
     glideVersion = "4.14.2"
+
+    //firebase
+    firebaseBom = "33.1.0"
+    firebaseAuth = "8.0.2"
 
     //airbnb  lottie
     airbnbLottieVersion = "3.1.0"
