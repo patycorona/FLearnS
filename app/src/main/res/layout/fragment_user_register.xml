@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.user.view.UserRegisterFragment">
+    tools:context=".ui.user.views.UserRegisterFragment">
 
     <View
         android:id="@+id/v_trasparence"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="@dimen/space_4dp"
-        android:layout_marginTop="@dimen/space_100dp"
+        android:layout_marginTop="@dimen/space_80dp"
         android:text="@string/tv_user_register"
         android:textStyle="bold"
         android:textColor="@color/blue"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/space_60dp"
+        android:layout_marginTop="@dimen/space_40dp"
         android:textColorHint="@color/blue"
         android:hint="@string/hint_email"
         >
@@ -119,7 +119,7 @@
         android:textAlignment="center"
         android:padding="@dimen/space_16dp"
         android:elevation="@dimen/space_4dp"
-        android:layout_width="@dimen/space_200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_16sp"

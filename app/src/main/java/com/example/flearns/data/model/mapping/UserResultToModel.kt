@@ -1,7 +1,8 @@
 package com.example.flearns.data.model.mapping
 
-import com.example.flearns.data.model.response.ResultResponse
-import com.example.flearns.domain.model.ResultModel
+import com.example.flearns.data.model.response.UserResultResponse
+import com.example.flearns.domain.model.UserResultModel
 
-internal fun ResultResponse.toModel() =
-    ResultModel(code = code, message = message,isSuccess = success)
+internal fun UserResultResponse.toModel() =
+    UserResultModel(code = code, message = message,isSuccess = success, user = user )
+

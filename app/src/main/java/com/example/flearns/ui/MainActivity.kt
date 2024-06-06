@@ -9,7 +9,7 @@ import com.example.flearns.R
 import com.example.flearns.databinding.ActivityMainBinding
 import com.example.flearns.ui.component.Screen
 import com.example.flearns.ui.login.LoginFragment
-import com.example.flearns.ui.user.view.UserRegisterFragment
+import com.example.flearns.ui.user.views.UserRegisterFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

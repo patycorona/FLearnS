@@ -4,8 +4,9 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class ResultModel(
+data class UserResultModel(
     var code: String = "",
     var message: String = "",
-    val isSuccess:Boolean = false
+    var isSuccess:Boolean = false,
+    var user:String = ""
 ): Parcelable

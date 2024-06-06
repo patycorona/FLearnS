@@ -1,4 +1,4 @@
-package com.example.flearns.ui.user.view
+package com.example.flearns.ui.user.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,7 +14,7 @@ import com.example.flearns.databinding.FragmentUserRegisterBinding
 import com.example.flearns.domain.model.ConstantGeneral.Companion.CODE
 import com.example.flearns.domain.model.ConstantGeneral.Companion.MSG_ERROR
 import com.example.flearns.domain.model.ConstantGeneral.Companion.MSG_REGISTER_SUCCESS
-import com.example.flearns.domain.model.ResultModel
+import com.example.flearns.domain.model.UserResultModel
 import com.example.flearns.domain.model.UserModel
 import com.example.flearns.ui.MainActivity
 import com.example.flearns.ui.component.Screen
@@ -57,7 +57,7 @@ class UserRegisterFragment : Fragment() {
         }
     }
 
-    private var ResultObserver  = Observer<ResultModel> { resultModel ->
+    private var ResultObserver  = Observer<UserResultModel> { resultModel ->
         if (resultModel.code == CODE) {
             Toast.makeText(
                 requireContext(), MSG_REGISTER_SUCCESS,

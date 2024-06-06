@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="@dimen/space_4dp"
-            android:layout_marginTop="@dimen/space_80dp"
+            android:layout_marginTop="@dimen/space_60dp"
             android:text="@string/tv_login"
             android:textStyle="bold"
             android:textColor="@color/blue"
@@ -53,7 +53,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/space_60dp"
+            android:layout_marginTop="@dimen/space_40dp"
             android:textColorHint="@color/blue"
             android:hint="@string/hint_email"
             >
@@ -64,7 +64,7 @@
                 android:textColor="@color/blue"
                 android:textSize="@dimen/text_size_18sp"
                 android:maxLines="@integer/min_lines"
-                android:text="maria@gmail.com"
+                android:text="Admin@admin.com"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
