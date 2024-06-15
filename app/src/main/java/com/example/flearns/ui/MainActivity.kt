@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.flearns.R
 import com.example.flearns.databinding.ActivityMainBinding
 import com.example.flearns.ui.component.Screen
+import com.example.flearns.ui.home.views.HomeFragment
 import com.example.flearns.ui.login.LoginFragment
 import com.example.flearns.ui.user.views.UserRegisterFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         ft.commit()
     }
 
-    fun changeScreen(typeScreen: Screen) {
+    fun changeScreen(typeScreen: Screen, user:String? = "") {
 
         binding.apply {
 
@@ -45,6 +46,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 Screen.UserRegisterFragment -> {
                     openUserRegister()
+                }
+                Screen.HomeFragment ->{
+                    openHomefragment(user)
                 }
 
                 else -> {
@@ -60,5 +64,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun openUserRegister(){
         changeFragment(UserRegisterFragment.newInstance())
+    }
+
+    private fun openHomefragment(user:String?){
+        changeFragment(HomeFragment.newInstance(user))
     }
 }

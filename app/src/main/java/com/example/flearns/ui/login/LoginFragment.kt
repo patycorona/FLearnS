@@ -25,7 +25,6 @@ class LoginFragment : Fragment() {
     private var binding: FragmentLoginBinding? = null
 
     private val fbUserViewModel: FbUserViewModel by viewModels()
-   // private val LOGIN_VIDEO = "/" + com.example.flearns.R.raw.login
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +39,6 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
 
         binding = FragmentLoginBinding.inflate(LayoutInflater.from(context),null, false)
 
@@ -67,7 +65,10 @@ class LoginFragment : Fragment() {
 
     private var userResultObserver  = Observer<UserResultModel> { result ->
         if (result.code == ConstantGeneral.CODE) {
+            var user = result.user
             Toast.makeText(context, result.user, Toast.LENGTH_SHORT).show()
+            (activity as MainActivity)
+                .changeScreen(Screen.HomeFragment, user)
 
         } else {
             Toast.makeText(
@@ -96,7 +97,6 @@ class LoginFragment : Fragment() {
 
         fbUserViewModel.loginFireBase(user)
     }
-
 
     companion object {
 

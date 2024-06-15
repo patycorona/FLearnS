@@ -15,4 +15,5 @@
     <string name="reg_user_empty">Ingrese la información</string>
     <string name="msg_error_pwd">El password no coincide</string>
     <string name="msg_error">An error ocurred</string>
+    <string name="msg_welcome">Bienvenid@:</string>
 </resources>
